@@ -6,4 +6,5 @@ COPY . .
 ARG RAILWAY_STATIC_URL
 ARG PUBLIC_URL
 ARG PORT
+RUN npx eslint . --no-ignore
 CMD ["npm", "start"]
