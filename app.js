@@ -25,7 +25,7 @@ const flujoCotizacion1 = addKeyword('1')
                 
             ])
         }).addAnswer('Cotización en: ', {
-            buttons: [{ body: 'diseño por' },
+            buttons: [{ body: 'diseño' },
                     { body: 'implementacion'},
                     { body: 'implementacion'}],
         })
