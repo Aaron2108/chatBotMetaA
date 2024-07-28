@@ -25,9 +25,9 @@ const flujoCotizacion1 = addKeyword('1')
                 
             ])
         }).addAnswer('Cotización en: ', {
-            buttons: [{ body: 'imagen' },
-                    { body: 'video'},
-                    { body: 'algo'}],
+            buttons: [{ body: 'diseño por m2' },
+                    { body: 'implementacion m2'},
+                    { body: 'implementacion m2'}],
         })
         
         const flujoAdios = addKeyword(['gracias', 'adios', 'bye', 'chau']).addAnswer('hasta luego')
