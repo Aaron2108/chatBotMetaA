@@ -24,10 +24,10 @@ const flujoCotizacion1 = addKeyword('1')
                 {body:`Hola ${nombre}, en que te puedo ayudar hoy?`}
                 
             ])
-        }).addAnswer('Este mensaje envia tres botones', {
-            buttons: [{ body: 'Cotización de diseño por (m2)' },
-                    { body: 'Cotización de implementación por depa completo (m2)' },
-                    { body: 'Cotización de implementación por ambiente (m2)' }],
+        }).addAnswer('Cotización en: ', {
+            buttons: [{ body: 'Diseño por m²' },
+                    { body: 'Implementación depa completo m²'},
+                    { body: 'Implementación por ambiente m²'}],
         })
         
         const flujoAdios = addKeyword(['gracias', 'adios', 'bye', 'chau']).addAnswer('hasta luego')
