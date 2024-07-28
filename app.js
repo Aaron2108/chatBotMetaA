@@ -37,7 +37,7 @@ const flujoCotizacion1 = addKeyword('1')
                         body: 'Cotización de implementación por ambiente (m2)'
                     }
                         ]
-                    }, null, [flujoCotizacion1])
+                    })
         
         const flujoAdios = addKeyword(['gracias', 'adios', 'bye', 'chau']).addAnswer('hasta luego')
 
