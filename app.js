@@ -42,7 +42,7 @@ const main = async () => {
     const adapterFlow = createFlow([flujoPrincipal,flujoAdios])
 
     const adapterProvider = createProvider(MetaProvider, {
-        jwtToken: 'EAAYgzcqAN3oBO1rXZA7xw9jD573KEdaSf19nTjWm6bH01FadBHnUGT5yMD3idVia6WPgh8R8cvP8xB3tiDBYAdExzLP7uiqy0ZAX5qZAUm1ZAYLQTc9QFCdYFl0jZADtL5rfyfNopEm15txwQtUTULbceimrFRIIStv8SPJXhdb6Bqc3wrH7pLqZCFcrIoyuuZBmyr42Iq790cyKJzZAGVcZD',
+        jwtToken: 'EAAYgzcqAN3oBO3BaSRvbbd8JY9yWhMpE8C99ECNK6wzHyhWpZBGUgGUK2IRyLe2vRhIKoO1Rfaz6KPIo6G8ZBZArW3PZCMs9M2NGv2cqAzgWG2meDy0iR4ZBHXhF3LoNr66R6ZB4nqdkU3fVgvSRHnX4KNRE1D2iMOJRar4MKMiDqorc2jiqROlsRldPdArdj9cwEh8cMmpgEUKAzb2CuA5gylx2ZAOTAZAtbQcZD',
         numberId: '392059530655358',
         verifyToken: 'dasdasdasdas@dasdasd2108@Safiro',
         version: 'v16.0',
