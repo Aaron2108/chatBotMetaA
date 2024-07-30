@@ -1,4 +1,5 @@
 const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
+const fs = require('fs');
 const path = require('path');
 const MetaProvider = require('@bot-whatsapp/provider/meta')
 const MockAdapter = require('@bot-whatsapp/database/mock')
@@ -9,9 +10,14 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 //     media: pdfPath, 
 // });
 
-        const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-            media: './arch/pdf/Propuesta2TO.pdf', 
-        })
+// Construye la ruta al archivo PDF
+const pdfPath = path.join(__dirname, 'arch', 'pdf', 'Propuesta2TO.pdf');
+console.log('Ruta al archivo PDF:', pdfPath);
+
+
+const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
+    media: pdfPath, 
+})
 
 
     const rangoInversion1 = addKeyword('1').addAnswer(['Indícame el rango de inversión que tienes proyectado:'
