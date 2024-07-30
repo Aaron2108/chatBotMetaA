@@ -4,6 +4,14 @@ const MetaProvider = require('@bot-whatsapp/provider/meta')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
+const welcomeFlow = addKeyword(EVENTS.WELCOME)
+    .addAction(
+        async (ctx, { flowDynamic, provider }) => {
+            const to = ctx.from
+            await provider.sendFile(to, './assets/presentacion1TO.pdf')
+        }
+    )
+
 const flowString = addKeyword('prueba')
     .addAnswer('Estas son las categorías disponibles:', null, async (ctx, {flowDynamic}) => {
         await flowDynamic('Enviar un mensaje text')
@@ -95,7 +103,7 @@ const flow = addKeyword('flow1')
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flujoPrincipal,flujoAdios, flow, flow2, flowString])
+    const adapterFlow = createFlow([flujoPrincipal,flujoAdios, flow, flow2, flowString, welcomeFlow])
 
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: 'EAAYgzcqAN3oBOxZBYiXvGgLkIqJlyrQCeootSWflbMIC7fNl0rP5vnB9WHIRHgoteto5OOZCv7CiAA3v1wYhdi4Xldx9ZCJgFPzPpTEsKeBn2s5zcNZC2KCMzSdxTHoAuHPmhVEirJM31NwlhhH1hpEKZCdNbExTFuPgHAnBlYZCK06i2A4PaZB2MCLLLYrpPkC1ZBdmdLJLzcKB46ctH12eiEJkzm2p63M22ecZD',
