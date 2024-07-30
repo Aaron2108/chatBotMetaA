@@ -5,7 +5,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 const flujoCotizacion1 = addKeyword('1')
 .addAnswer(['Que ambiente necesitas'
-            , '*1*: sala comedor'
+            ,'*1*: sala comedor'
             ,'*2*: sala cocina'
             ,'*3*: sala dormitorio principal'
             ,'*4*: sala dormitorio secundario'
@@ -24,18 +24,18 @@ const flujoCotizacion1 = addKeyword('1')
                 {body:`Hola ${nombre}, en que te puedo ayudar hoy?`}
                 
             ])
-        }).addAnswer('Cotización en: ', {
-            buttons: [{ body: 'diseño' },
-                    { body: 'implementacion'},
-                    { body: 'implementacion'}],
-        })
+        }).addAnswer(['*1*: Cotización de diseño por (m2)'
+            , '*2*: Cotización de implementación por depa completo (m2)'
+            ,'*3*: Cotización de implementación por ambiente (m2)'],null, null, [flujoCotizacion1])
         
         const flujoAdios = addKeyword(['gracias', 'adios', 'bye', 'chau']).addAnswer('hasta luego')
 
-        // ['*1*: Cotización de diseño por (m2)'
-        //     , '*2*: Cotización de implementación por depa completo (m2)'
-        //     ,'*3*: Cotización de implementación por ambiente (m2)'],
-        
+
+        // {
+        //     buttons: [{ body: 'diseño' },
+        //             { body: 'implementacion'},
+        //             { body: 'implementacion'}],
+        // }
 
 const main = async () => {
     const adapterDB = new MockAdapter()
