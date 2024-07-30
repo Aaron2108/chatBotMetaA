@@ -11,7 +11,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 // });
 
 const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia un PDF', {
-    media: "pdf/propuesta3TO.pdf",
+    media: "E:\BOTIA\base-meta-memory\pdf\propuesta3TO.pdf",
 })
 
     const rangoInversion1 = addKeyword('1').addAnswer(['Indícame el rango de inversión que tienes proyectado:'
