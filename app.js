@@ -9,7 +9,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 //     media: pdfPath, 
 // });
 
-const cotizacion1 = addKeyword('1').addAnswer(`Send file from Local`, { media: join(process.cwd(), 'src', 'pdf', 'presentacion1TO.pdf') })
+const cotizacion1 = addKeyword('1').addAnswer(`ESTO ES EL TEXTO CAPTION DE LA IMAGEN`, { media: join(process.cwd(), 'propuesta3TO.pdf') })
 
     const rangoInversion1 = addKeyword('1').addAnswer(['Indícame el rango de inversión que tienes proyectado:'
         ,'*1*: S/10,000 a S/15,000'
