@@ -11,7 +11,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 // });
 
 const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-    media: '/pdf/propuesta3TO.pdf'
+    media: "https://repositorio.uam.es/bitstream/handle/10486/698762/menus_montero_ALVIMED_2020.pdf?sequence=4"
 })
 
 
