@@ -1,6 +1,5 @@
 const { createBot, createProvider, createFlow, addKeyword,EVENTS } = require('@bot-whatsapp/bot')
-const fs = require('fs');
-const path = require('path');
+const {join} = require('path')
 const MetaProvider = require('@bot-whatsapp/provider/meta')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
@@ -10,9 +9,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 //     media: pdfPath, 
 // });
 
-const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia un PDF', {
-    media: "E:/BOTIA/base-meta-memory/pdf/propuesta3TO.pdf",
-})
+const cotizacion1 = addKeyword('1').addAnswer(`Send file from Local`, { media: join(process.cwd(), 'pdf', 'media', 'presentacion1TO.pdf.pdf') })
 
     const rangoInversion1 = addKeyword('1').addAnswer(['Indícame el rango de inversión que tienes proyectado:'
         ,'*1*: S/10,000 a S/15,000'
