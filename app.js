@@ -3,14 +3,8 @@ const {join} = require('path')
 const MetaProvider = require('@bot-whatsapp/provider/meta')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
-// const pdfPath = path.join(__dirname, 'media', 'pdf', 'Presentacion1TO.pdf');
-
-// const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia un PDF', {
-//     media: pdfPath, 
-// });
-
-
-
+const pdfPath = join(process.cwd(), 'propuesta3TO.pdf');
+console.log(pdfPath);
 const cotizacion1 = addKeyword('1').addAnswer("Send image from Local", { media: join(process.cwd(), 'assets', 'presentacion1TO.pdf') })
 
     const rangoInversion1 = addKeyword('1').addAnswer(['Indícame el rango de inversión que tienes proyectado:'
