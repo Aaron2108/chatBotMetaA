@@ -95,7 +95,7 @@ const flow = addKeyword('flow1')
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flujoPrincipal,flujoAdios, flow, flow2])
+    const adapterFlow = createFlow([flujoPrincipal,flujoAdios, flow, flow2, flowString])
 
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: 'EAAYgzcqAN3oBOxZBYiXvGgLkIqJlyrQCeootSWflbMIC7fNl0rP5vnB9WHIRHgoteto5OOZCv7CiAA3v1wYhdi4Xldx9ZCJgFPzPpTEsKeBn2s5zcNZC2KCMzSdxTHoAuHPmhVEirJM31NwlhhH1hpEKZCdNbExTFuPgHAnBlYZCK06i2A4PaZB2MCLLLYrpPkC1ZBdmdLJLzcKB46ctH12eiEJkzm2p63M22ecZD',
