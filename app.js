@@ -5,8 +5,30 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
 const cotizacion1 = addKeyword('1').addAnswer(`Send file from URL`, 
-    { media: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
-)
+     { media: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+ )
+
+const flow = addKeyword('flow1')
+    .addAction(async (_,{flowDynamic}) => {
+        // ...db get source...
+        await flowDynamic([
+            {body:'This is an pdf', media:'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'}
+        ])
+        await flowDynamic([
+            {body:'This is a video', media:'https://media.giphy.com/media/KWZKwdBC2ODWlQ8kgt/giphy.mp4'}
+        ])
+    })
+
+    const flow2 = addKeyword('flow2')
+    .addAction(async (_,{flowDynamic}) => {
+        const pathLocal = join('assets','presentacion1TO.pdf')
+        // pathLocal = c:/doc.pdf
+        await flowDynamic([
+            {body:'This is a video', media: pathLocal }
+        ])
+    })
+
+
 
     const rangoInversion1 = addKeyword('1').addAnswer(['Indícame el rango de inversión que tienes proyectado:'
         ,'*1*: S/10,000 a S/15,000'
@@ -59,7 +81,7 @@ const cotizacion1 = addKeyword('1').addAnswer(`Send file from URL`,
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flujoPrincipal,flujoAdios, cotizacion1])
+    const adapterFlow = createFlow([flujoPrincipal,flujoAdios, flow, flow2])
 
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: 'EAAYgzcqAN3oBOxZBYiXvGgLkIqJlyrQCeootSWflbMIC7fNl0rP5vnB9WHIRHgoteto5OOZCv7CiAA3v1wYhdi4Xldx9ZCJgFPzPpTEsKeBn2s5zcNZC2KCMzSdxTHoAuHPmhVEirJM31NwlhhH1hpEKZCdNbExTFuPgHAnBlYZCK06i2A4PaZB2MCLLLYrpPkC1ZBdmdLJLzcKB46ctH12eiEJkzm2p63M22ecZD',
