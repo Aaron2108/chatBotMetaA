@@ -5,7 +5,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
     const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-        media: '/media/pdf/Presentacion1TO.pdf', 
+        media: 'C:/Users/Oliver/Downloads/Presentacion1TO.pdf', 
 })
 
 
@@ -60,7 +60,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flujoPrincipal,flujoAdios])
+    const adapterFlow = createFlow([flujoPrincipal,flujoAdios, cotizacion1])
 
     const adapterProvider = createProvider(MetaProvider, {
         jwtToken: 'EAAYgzcqAN3oBO3BaSRvbbd8JY9yWhMpE8C99ECNK6wzHyhWpZBGUgGUK2IRyLe2vRhIKoO1Rfaz6KPIo6G8ZBZArW3PZCMs9M2NGv2cqAzgWG2meDy0iR4ZBHXhF3LoNr66R6ZB4nqdkU3fVgvSRHnX4KNRE1D2iMOJRar4MKMiDqorc2jiqROlsRldPdArdj9cwEh8cMmpgEUKAzb2CuA5gylx2ZAOTAZAtbQcZD',
