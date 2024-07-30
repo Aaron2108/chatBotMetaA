@@ -9,9 +9,9 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 // const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia un PDF', {
 //     media: pdfPath, 
 // });
-
+const pathMenu = path.join(__dirname, 'pdf', "propuesta3TO.pdf");
 const cotizacion1 = addKeyword(EVENTS.ACTION).addAnswer('Este mensaje envia un PDF', {
-    media: "https://repositorio.uam.es/bitstream/handle/10486/698762/menus_montero_ALVIMED_2020.pdf"
+    media: pathMenu
 })
 
 
