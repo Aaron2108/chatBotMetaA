@@ -16,7 +16,7 @@ console.log('Ruta al archivo PDF:', pdfPath);
 
 
 const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-    media: pdfPath, 
+    media: 'E:/BOTIA/base-meta-memory/arch/pdf/Propuesta2TO.pdf'
 })
 
 
