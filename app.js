@@ -10,13 +10,8 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 //     media: pdfPath, 
 // });
 
-// Construye la ruta al archivo PDF
-const pdfPath = path.join(__dirname, 'arch', 'pdf', 'Propuesta2TO.pdf');
-console.log('Ruta al archivo PDF:', pdfPath);
-
-
 const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-    media: 'https://drive.google.com/uc?export=download&id=1hp2ndcq08idgvwhjWAyIMD2x7q5q4LXB'
+    media: './pdf/propuesta3TO.pdf'
 })
 
 
