@@ -4,6 +4,20 @@ const MetaProvider = require('@bot-whatsapp/provider/meta')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
+const flowString = addKeyword('prueba')
+    .addAnswer('Estas son las categorías disponibles:', null, async (ctx, {flowDynamic}) => {
+        await flowDynamic('Enviar un mensaje text')
+        // Enviar una imagen o pdf o etc
+        await flowDynamic([
+            {
+                body:"soy una imagen",
+                media:'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+                delay:1000
+            }
+        ]) 
+        
+    })
+
 const cotizacion1 = addKeyword('1').addAnswer(`Send file from URL`, 
      { media: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
  )
