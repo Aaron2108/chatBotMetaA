@@ -4,7 +4,9 @@ const MetaProvider = require('@bot-whatsapp/provider/meta')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
-const cotizacion1 = addKeyword('1').addAnswer("Send image from Local", { media: join(process.cwd(), 'assets', 'presentacion1TO.pdf') })
+const cotizacion1 = addKeyword('1').addAnswer(`Send file from URL`, 
+    { media: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+)
 
     const rangoInversion1 = addKeyword('1').addAnswer(['Indícame el rango de inversión que tienes proyectado:'
         ,'*1*: S/10,000 a S/15,000'
