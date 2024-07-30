@@ -11,7 +11,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 // });
 
 const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-    media: './pdf/propuesta3TO.pdf'
+    media: '/pdf/propuesta3TO.pdf'
 })
 
 
