@@ -9,11 +9,10 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 // const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia un PDF', {
 //     media: pdfPath, 
 // });
-const pathMenu = path.join(__dirname, 'pdf', "propuesta3TO.pdf");
-const cotizacion1 = addKeyword(EVENTS.ACTION).addAnswer('Este mensaje envia un PDF', {
-    media: pathMenu
-})
 
+const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia un PDF', {
+    media: "pdf/propuesta3TO.pdf",
+})
 
     const rangoInversion1 = addKeyword('1').addAnswer(['Indícame el rango de inversión que tienes proyectado:'
         ,'*1*: S/10,000 a S/15,000'
