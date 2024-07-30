@@ -6,9 +6,9 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 const welcomeFlow = addKeyword(EVENTS.WELCOME)
     .addAction(
-        async (ctx, { flowDynamic, provider }) => {
+        async (ctx, { flowDynamic, sock }) => {
             const to = ctx.from
-            await provider.sendFile(to, './assets/presentacion1TO.pdf')
+            await sock.sendFile(to, './assets/presentacion1TO.pdf')
         }
     )
 
