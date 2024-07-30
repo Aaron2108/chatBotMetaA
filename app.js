@@ -1,4 +1,4 @@
-const { createBot, createProvider, createFlow, addKeyword } = require('@bot-whatsapp/bot')
+const { createBot, createProvider, createFlow, addKeyword,EVENTS } = require('@bot-whatsapp/bot')
 const fs = require('fs');
 const path = require('path');
 const MetaProvider = require('@bot-whatsapp/provider/meta')
@@ -10,7 +10,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 //     media: pdfPath, 
 // });
 
-const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
+const cotizacion1 = addKeyword(EVENTS.ACTION).addAnswer('Este mensaje envia un PDF', {
     media: "https://repositorio.uam.es/bitstream/handle/10486/698762/menus_montero_ALVIMED_2020.pdf"
 })
 
