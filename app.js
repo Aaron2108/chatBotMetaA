@@ -3,6 +3,14 @@ const { createBot, createProvider, createFlow, addKeyword } = require('@bot-what
 const MetaProvider = require('@bot-whatsapp/provider/meta')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
+
+const rangoCotizacion1 = addKeyword('1').addAnswer(['Indícame el rango en m2 que tiene tu ambiente:'
+    ,'*1*: 3m² a 5m²'
+    ,'*2*: 6m² a 10m²'
+    ,'*3*: 11m² a 15m²'
+    ,'*4*: 16m² a 20m²'
+])
+
 const flujoCotizacion1 = addKeyword('1')
 .addAnswer(['Que ambiente necesitas'
             ,'*1*: sala comedor'
@@ -11,7 +19,7 @@ const flujoCotizacion1 = addKeyword('1')
             ,'*4*: sala dormitorio secundario'
             ,'*5*: sala baño privado'
             ,'*6*: sala baño de visitas'
-        ])
+        ], null,null,[rangoCotizacion1])
 
         const flujoPrincipal = addKeyword(['Hola', 'hola', 'buenas'])
         .addAnswer('hola que tal te saluda ... 😊')
@@ -24,9 +32,10 @@ const flujoCotizacion1 = addKeyword('1')
                 {body:`Hola ${nombre}, en que te puedo ayudar hoy?`}
                 
             ])
-        }).addAnswer(['*1*: Cotización de diseño por (m2)'
-            , '*2*: Cotización de implementación por depa completo (m2)'
-            ,'*3*: Cotización de implementación por ambiente (m2)'],null, null, [flujoCotizacion1])
+        }).addAnswer(['*1*: Cotización de diseño por m²'
+            , '*2*: Cotización de implementación por depa completo m²'
+            ,'*3*: Cotización de implementación por ambiente m²'],null, null, [flujoCotizacion1])
+
         
         const flujoAdios = addKeyword(['gracias', 'adios', 'bye', 'chau']).addAnswer('hasta luego')
 
