@@ -10,7 +10,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 // });
 
         const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-            media: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVFjfNj1UUd0zh-yiRgblmTZbrUD6Se0ebdw&s', 
+            media: './arch/pdf/Propuesta2TO.pdf', 
         })
 
 
