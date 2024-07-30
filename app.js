@@ -5,7 +5,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
     const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-        media: 'C:/Users/Oliver/Downloads/Presentacion1TO.pdf', 
+        media: './media/pdf/Presentacion1TO.pdf', 
 })
 
 
