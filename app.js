@@ -11,7 +11,7 @@ const flowString = addKeyword('prueba')
         await flowDynamic([
             {
                 body:"soy una imagen",
-                media:'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+                media:'https://elcomercio.pe/resizer/v2/6FUBT6XQXNHHNFOMCHIT7I34NA.jpg?auth=75b9cd3f5f728a5e2d90b6996b551d7e7e346d0a63104e3596036c1f214a1b77&width=580&height=330&quality=75&smart=true',
                 delay:1000
             }
         ]) 
