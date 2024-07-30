@@ -16,7 +16,7 @@ console.log('Ruta al archivo PDF:', pdfPath);
 
 
 const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-    media: 'https://drive.google.com/file/d/1hp2ndcq08idgvwhjWAyIMD2x7q5q4LXB/view?usp=sharing'
+    media: 'https://drive.google.com/uc?export=download&id=1hp2ndcq08idgvwhjWAyIMD2x7q5q4LXB'
 })
 
 
