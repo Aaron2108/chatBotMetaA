@@ -11,7 +11,7 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 // });
 
 const cotizacion1 = addKeyword('1').addAnswer('Este mensaje envia una imagen', {
-    media: "https://repositorio.uam.es/bitstream/handle/10486/698762/menus_montero_ALVIMED_2020.pdf?sequence=4"
+    media: "https://repositorio.uam.es/bitstream/handle/10486/698762/menus_montero_ALVIMED_2020.pdf"
 })
 
 
@@ -69,7 +69,7 @@ const main = async () => {
     const adapterFlow = createFlow([flujoPrincipal,flujoAdios, cotizacion1])
 
     const adapterProvider = createProvider(MetaProvider, {
-        jwtToken: 'EAAYgzcqAN3oBO3BaSRvbbd8JY9yWhMpE8C99ECNK6wzHyhWpZBGUgGUK2IRyLe2vRhIKoO1Rfaz6KPIo6G8ZBZArW3PZCMs9M2NGv2cqAzgWG2meDy0iR4ZBHXhF3LoNr66R6ZB4nqdkU3fVgvSRHnX4KNRE1D2iMOJRar4MKMiDqorc2jiqROlsRldPdArdj9cwEh8cMmpgEUKAzb2CuA5gylx2ZAOTAZAtbQcZD',
+        jwtToken: 'EAAYgzcqAN3oBOxZBYiXvGgLkIqJlyrQCeootSWflbMIC7fNl0rP5vnB9WHIRHgoteto5OOZCv7CiAA3v1wYhdi4Xldx9ZCJgFPzPpTEsKeBn2s5zcNZC2KCMzSdxTHoAuHPmhVEirJM31NwlhhH1hpEKZCdNbExTFuPgHAnBlYZCK06i2A4PaZB2MCLLLYrpPkC1ZBdmdLJLzcKB46ctH12eiEJkzm2p63M22ecZD',
         numberId: '392059530655358',
         verifyToken: 'dasdasdasdas@dasdasd2108@Safiro',
         version: 'v16.0',
